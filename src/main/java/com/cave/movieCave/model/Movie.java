@@ -1,4 +1,4 @@
-package model;
+package com.cave.movieCave.model;
 
 import jakarta.persistence.*;
 
@@ -9,7 +9,7 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
+
     private String title;
 
     private String img;
