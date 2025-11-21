@@ -26,8 +26,8 @@ public class MovieService {
         return movie;
     }
 
-    public Movie updateMovie(Movie movie){
-        Movie newMovie = getMovieById(movie.getId());
+    public Movie updateMovie(Movie movie, int id){
+        Movie newMovie = movieRepository.findById(id).get();
         newMovie.setTitle(movie.getTitle());
         newMovie.setImg(movie.getImg());
         newMovie.setScore(movie.getScore());
