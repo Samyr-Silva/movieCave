@@ -14,6 +14,10 @@ public class Movie {
 
     private String img;
 
+    private int year;
+
+    private String category;
+
     private float score;
 
     public Integer getId(){
@@ -38,6 +42,22 @@ public class Movie {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public float getScore() {

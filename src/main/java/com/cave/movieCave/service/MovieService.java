@@ -30,6 +30,8 @@ public class MovieService {
         Movie newMovie = movieRepository.findById(id).get();
         newMovie.setTitle(movie.getTitle());
         newMovie.setImg(movie.getImg());
+        newMovie.setYear(movie.getYear());
+        newMovie.setCategory(movie.getCategory());
         newMovie.setScore(movie.getScore());
         return movieRepository.save(newMovie);
 
