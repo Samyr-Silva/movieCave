@@ -18,7 +18,7 @@ public class Movie {
 
     private String category;
 
-    private float score;
+    private float rating;
 
     public Integer getId(){
         return id;
@@ -60,11 +60,11 @@ public class Movie {
         this.category = category;
     }
 
-    public float getScore() {
-        return score;
+    public float getRating() {
+        return rating;
     }
 
-    public void setScore(float score) {
-        this.score = score;
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 }
