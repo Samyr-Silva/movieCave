@@ -13,16 +13,17 @@ public class Favorite {
     // Proprieties
 
     @Id // Jakarta Persistence annotation which tells "this is the Primary Key"
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // define how will be generated and how (the generationType part)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // define how will be generated and how (the generationType part)
     private Integer id;
 
-    @OneToMany  // define the relationship
+    @ManyToOne  // define the relationship
     @JoinColumn(name = "movie_id") // this configures the column (gives a name and tell that is the Foreign Key)
-    private Integer movie_id;
+    private Movie movie_id;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "user_id")
-    private Integer user_id;
+    private User user_id;
 
     // Gatters and Setters
 
@@ -34,19 +35,19 @@ public class Favorite {
         this.id = id;
     }
 
-    public Integer getMovie_id() {
+    public Movie getMovie_id() {
         return movie_id;
     }
 
-    public void setMovie_id(Integer movie_id) {
+    public void setMovie_id(Movie movie_id) {
         this.movie_id = movie_id;
     }
 
-    public Integer getUser_id() {
+    public User getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(Integer user_id) {
+    public void setUser_id(User user_id) {
         this.user_id = user_id;
     }
 }
