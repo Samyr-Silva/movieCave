@@ -14,6 +14,7 @@ public class User {
 
     private String name;
 
+    @OneToMany
     private List<Favorite> favoriteMovies;
 
     private String email;
